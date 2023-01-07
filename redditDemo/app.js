@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const mongoose = require("mongoose");
+const redditData = require("./data.json");
 
 // Set the view engine to EJS
 app.set("view engine", "ejs");
@@ -31,7 +32,13 @@ app.get("/r/random", (req, res) => {
 
 app.get("/r/:subreddit", (req, res) => {
   const { subreddit } = req.params;
-  res.render("subreddit", { subreddit });
+  const data = redditData[subreddit];
+  if (data) {
+    res.render("subreddit", { data });
+    // {...data} using the spread operator, you can just call the properties instead of data.title, data.descrption, data.author, data.img
+  } else {
+    res.render("notfound", { subreddit });
+  }
 });
 
 app.listen(3000, () => {
