@@ -18,7 +18,12 @@ app.get("/", (req, res) => {
   res.render("home");
 });
 
-app.get("/random", (req, res) => {
+app.get("/r/pokemon", (req, res) => {
+  const pokemon = ["bulbasaur", "squirtle", "charmander", "pickachu"];
+  res.render("pokemon", { pokemon });
+});
+
+app.get("/r/random", (req, res) => {
   const number = Math.floor(Math.random() * 10) + 1;
   const isEvenOrOdd = number % 2 === 0 ? "Number is even" : "Number is odd";
   res.render("random", { number, isEvenOrOdd });
