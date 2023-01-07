@@ -8,6 +8,8 @@ const redditData = require("./data.json");
 app.set("view engine", "ejs");
 // Set the views directory
 app.set("views", path.join(__dirname, "views"));
+// Set the public directory
+app.use(express.static(path.join(__dirname, "public")));
 
 // A middleware function that logs the request method and URL
 app.use((req, res, next) => {
