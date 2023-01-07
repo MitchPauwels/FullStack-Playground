@@ -20,7 +20,13 @@ app.get("/", (req, res) => {
 
 app.get("/random", (req, res) => {
   const number = Math.floor(Math.random() * 10) + 1;
-  res.render("random", { number });
+  const isEvenOrOdd = number % 2 === 0 ? "Number is even" : "Number is odd";
+  res.render("random", { number, isEvenOrOdd });
+});
+
+app.get("/r/:subreddit", (req, res) => {
+  const { subreddit } = req.params;
+  res.render("subreddit", { subreddit });
 });
 
 app.listen(3000, () => {
