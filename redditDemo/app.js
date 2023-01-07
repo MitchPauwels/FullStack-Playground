@@ -15,7 +15,12 @@ app.use((req, res, next) => {
 });
 
 app.get("/", (req, res) => {
-  res.send("Root Page");
+  res.render("home");
+});
+
+app.get("/random", (req, res) => {
+  const number = Math.floor(Math.random() * 10) + 1;
+  res.render("random", { number });
 });
 
 app.listen(3000, () => {
