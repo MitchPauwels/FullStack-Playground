@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const path = require('path')
+const {v4: uuid} = require('uuid')
 
 // Middleware
 app.use(express.json())
@@ -15,26 +16,26 @@ app.set("views", path.join(__dirname, "views"));
 // Fake existing comments
 const comments = [
 {
-    id: 1,
+    id: uuid(),
     username: 'Mitch',
     comment: 'FIRST TRY!'
 },
 {
-    id: 2,
+    id: uuid(),
     username: 'Danni',
     comment: 'The Holidays Stress Me out!'
 },
 {
-    id: 3,
+    id: uuid(),
     username: 'J9',
     comment: 'GUYS! I GOT ENGAGED!'
 },
 {
-    id: 4,
+    id: uuid(),
     username: 'Taheo',
     comment: 'I need a girlfriend'
 },
-{   id: 5,
+{   id: uuid(),
     username: 'Ana',
     comment: 'I Got the internship!!!!!'
 },
@@ -55,13 +56,14 @@ app.get('/comments/new', (req,res) => {
 
 app.post('/comments', (req,res) => {
     const {username, comment} = req.body
-    comments.push({username, comment})
+    comments.push({username, comment, id: uuid()})
     res.redirect('/comments')
 })
 
 app.get('/comments/:id', (req,res) => {
     const {id} = req.params
-    const comment = comments.find(c => c.id === parseInt(id))
+    // Search ID from search query with ID from Database
+    const comment = comments.find(c => c.id === id)
     res.render('comments/show', {comment})
 })
 
