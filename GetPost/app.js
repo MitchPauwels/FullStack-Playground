@@ -15,22 +15,26 @@ app.set("views", path.join(__dirname, "views"));
 // Fake existing comments
 const comments = [
 {
+    id: 1,
     username: 'Mitch',
     comment: 'FIRST TRY!'
 },
 {
+    id: 2,
     username: 'Danni',
     comment: 'The Holidays Stress Me out!'
 },
 {
+    id: 3,
     username: 'J9',
     comment: 'GUYS! I GOT ENGAGED!'
 },
 {
+    id: 4,
     username: 'Taheo',
     comment: 'I need a girlfriend'
 },
-{
+{   id: 5,
     username: 'Ana',
     comment: 'I Got the internship!!!!!'
 },
@@ -53,6 +57,12 @@ app.post('/comments', (req,res) => {
     const {username, comment} = req.body
     comments.push({username, comment})
     res.redirect('/comments')
+})
+
+app.get('/comments/:id', (req,res) => {
+    const {id} = req.params
+    const comment = comments.find(c => c.id === parseInt(id))
+    res.render('comments/show', {comment})
 })
 
 //================================
