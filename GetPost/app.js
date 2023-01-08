@@ -11,8 +11,11 @@ app.get('/tacos', (req,res) => {
 })
 
 app.post('/tacos', (req,res) => {
-    console.log(req.body);
-    res.send('POST /tacos response')
+    const meat = req.body.meat
+    const qty = req.body.qty
+    // Can also be deconstrutured
+    // const {meat, qty} = req.body
+    res.send(`Meat: ${meat} Qty: ${qty}`)
 })
 
 // Listen
