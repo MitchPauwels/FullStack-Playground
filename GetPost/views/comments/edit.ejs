@@ -10,16 +10,12 @@
     <h1>Edit Comment</h1>
     <form action="/comments/<%= comment.id %>?_method=PATCH" method="post">
         <div>
-            <label for="username">Enter username:</label><br>
-            <input type="text" id="username" name="username" placeholder="<%= comment.username %> ">
-        </div>
-
-        <div>
-            <label for="comment">Enter your comment:</label><br>
+            <label for="comment">Edit your comment:</label><br>
             <textarea name="comment" id="comment" cols="30" rows="5"><%= comment.comment %> </textarea>
         </div>
         <button>Update Comment</button>
     </form>
+
     <a href="/comments">Back to Comments</a>
     <a href="/comments/<%= comment.id %>">Cancel</a>
 </body>

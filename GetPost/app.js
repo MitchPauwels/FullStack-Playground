@@ -17,7 +17,7 @@ app.set('view engine', 'ejs');
 app.set("views", path.join(__dirname, "views"));
 
 // Fake existing comments
-const comments = [
+let comments = [
 {
     id: uuid(),
     username: 'Mitch',
@@ -86,6 +86,13 @@ app.patch('/comments/:id',(req,res) => {
     // Change current comment with new comment
     foundComment.comment = newCommentText
     res.redirect(`/comments/${id}`)
+})
+
+app.delete('/comments/:id',(req,res) => {
+    const {id} = req.params
+    // Create new array minus the id that we wish to delete
+   comments = comments.filter(c => c.id !== id)
+   res.redirect(`/comments`)
 })
 
 //================================
