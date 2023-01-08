@@ -2,10 +2,13 @@ const express = require('express')
 const app = express()
 const path = require('path')
 const {v4: uuid} = require('uuid')
+const methodOverride = require('method-override')
 
 // Middleware
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
+// override with POST having ?_method=PATCH
+app.use(methodOverride('_method'))
 
 // Set up EJS as the template engine
 app.set('view engine', 'ejs');
@@ -65,6 +68,24 @@ app.get('/comments/:id', (req,res) => {
     // Search ID from search query with ID from Database
     const comment = comments.find(c => c.id === id)
     res.render('comments/show', {comment})
+})
+
+app.get('/comments/:id/edit', (req,res) => {
+    const {id} = req.params
+    // Search ID from search query with ID from Database
+    const comment = comments.find(c => c.id === id)
+    res.render('comments/edit', {comment})
+})
+
+app.patch('/comments/:id',(req,res) => {
+    const {id} = req.params
+    // This hold whatever is there as a comment
+    const newCommentText = req.body.comment
+    // Search ID from search query with ID from Database
+    const foundComment = comments.find(c => c.id === id)
+    // Change current comment with new comment
+    foundComment.comment = newCommentText
+    res.redirect(`/comments/${id}`)
 })
 
 //================================
