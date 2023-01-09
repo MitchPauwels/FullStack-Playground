@@ -3,7 +3,7 @@ const section = document.querySelector('section')
 
 function getPokemon(number) {
   for(let i = 1; i <= number; i++){
-    const random = Math.floor(Math.random() * 20) +1
+    const random = Math.floor(Math.random() * 155) +1
 
     // fetch(`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${i}.png`)
     fetch(`https://pokeapi.co/api/v2/pokemon/${random}`)
@@ -24,6 +24,6 @@ function getPokemon(number) {
 
 }
 
-  getPokemon(20)
+  getPokemon(155)
 
 
