@@ -3,6 +3,7 @@ const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
 const path = require('path')
+const methodOverride = require('method-override')
 //import the model
 const Product = require('./models/product')
 
@@ -29,6 +30,7 @@ app.set('views', path.join(__dirname, 'views'))
 // Middleware
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
+app.use(methodOverride('_method'))
 
 
 //routes
@@ -54,6 +56,20 @@ app.get('/products/:id', async (req,res) => {
   const product = await Product.findById(id)
   res.render('products/show', {product})
   console.log(product); // Brocoli
+})
+
+app.get('/products/:id/edit',async (req,res) => {
+  const {id} = req.params
+  // console.log(id);
+  const product = await Product.findById(id)
+  res.render('products/edit', {product})
+})
+
+app.patch('/products/:id', async(req,res) => {
+  const {id} = req.params
+  //Update product
+  const product = await Product.findByIdAndUpdate(id, req.body, {runValidators: true})
+  res.redirect(`/products/${product._id}`)
 })
 
 
