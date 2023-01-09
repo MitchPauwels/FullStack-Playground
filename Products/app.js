@@ -34,8 +34,15 @@ app.use(express.json())
 //routes
 app.get('/products', async (req,res) => {
     const products = await Product.find({})
-    console.log(products);
     res.render('products/index', {products})
+})
+
+app.get('/products/:id', async (req,res) => {
+  const {id} = req.params
+  // console.log(id);
+  const product = await Product.findById(id)
+  res.render('products/show', {product})
+  console.log(product); // Brocoli
 })
 
 //listen
