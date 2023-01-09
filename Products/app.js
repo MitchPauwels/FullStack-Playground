@@ -1,8 +1,10 @@
+// Imports
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
 const path = require('path')
-
+//import the model
+const Product = require('./models/product')
 
 // Connect to the MongoDB database
 main().catch(err => console.log(err));
@@ -30,8 +32,10 @@ app.use(express.json())
 
 
 //routes
-app.get('/', (req,res) => {
-    res.send('Root Page')
+app.get('/products', async (req,res) => {
+    const products = await Product.find({})
+    console.log(products);
+    res.render('products/index', {products})
 })
 
 //listen
