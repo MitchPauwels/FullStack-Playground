@@ -4,6 +4,7 @@ const connectDB = async () => {
     let tries = 0;
     while (tries < 5) {
       try {
+        mongoose.set('strictQuery', false)
         const conn = await mongoose.connect(process.env.DB_CONNECTION);
         console.log(`MongoDB connected: ${conn.connection.host}`);
         return; // Return early to exit the loop

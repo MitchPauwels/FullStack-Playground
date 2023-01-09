@@ -5,6 +5,7 @@ const PORT = 8000
 const mongoose = require('mongoose')
 const path = require('path')
 const connectDB = require('./config/database')
+const homeRoutes = require('./routes/home')
 require('dotenv').config({path: './config/.env'})
 // Import functions/routes
 
@@ -20,8 +21,9 @@ app.set(express.static('public'))
 // Middleware
 app.use(express.urlencoded({extended: true}))
 // app.use(express.json())
-// Set Routes
 
+// Set Routes
+app.use('/', homeRoutes)
 // Start Server
 //listen
 app.listen(PORT, () => {
