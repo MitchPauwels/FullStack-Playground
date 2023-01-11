@@ -1,5 +1,6 @@
 export default function Card (props) {
     return (
+        <>
         <div className="card">
             <img className="card-main-img" src={props.imageUrl} /> 
             <div className="card-content-wrapper">
@@ -12,7 +13,8 @@ export default function Card (props) {
                 <span className="card-date">{props.startDate}{props.endDate}</span>
                 <p className="card-description">{props.description}</p>
             </div>
-           
         </div>
+        <hr/>
+        </>
     )
 }
