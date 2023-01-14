@@ -139,5 +139,114 @@ import React from 'react'
 //   )
 // }
 
+/*==========================================
+          EXERCISE PART 4 - TERNARY PRACTICE
+==============================================*/
 
-// ----------------------------------------------------------------------------------
+// export default function App() {
+//     /**PART 1
+//      * Challenge: Replace the if/else below with a ternary
+//      * to determine the text that should display on the page
+//      */
+        /** PART 2
+     * Challenge: move our ternary directly inside of the JSX
+     * so the "Yes" and "No" are determined inside the <h1>
+     * 
+     * Hint: you will no longer need the `answer` variable
+     */
+//     const isGoingOut = true
+    
+//     let answer  // Use ternary here
+//     if(isGoingOut === true) {
+//         answer = "Yes"
+//     } else {
+//         answer = "No"
+//     }
+    
+//     return (
+//         <div className="state">
+//             <h1 className="state--title">Do I feel like going out tonight?</h1>
+//             <div className="state--value">
+//                 <h1>{answer}</h1>
+//             </div>
+//         </div>
+//     )
+// }
+
+/*==========================================
+          ANSWER PART 4 - TERNARY PRACTICE
+==============================================*/
+
+// export default function App() {
+//     /** PART 1
+//      * Challenge: Replace the if/else below with a ternary
+//      * to determine the text that should display on the page
+//      */
+
+//         /** PART 2
+//      * Challenge: move our ternary directly inside of the JSX
+//      * so the "Yes" and "No" are determined inside the <h1>
+//      * 
+//      * Hint: you will no longer need the `answer` variable
+//      */
+//     const isGoingOut = true
+    
+//     return (
+//         <div className="state">
+//             <h1 className="state--title">Do I feel like going out tonight?</h1>
+//             <div className="state--value">
+//                 <h1>{isGoingOut ? 'Yes' : 'No'}</h1>
+//             </div>
+//         </div>
+//     )
+// }
+
+/*==========================================
+          EXERCISE PART 5 - TERNARY PRACTICE
+==============================================*/
+// export default function App() {
+//     /**
+//      * Challenge: 
+//      * - Initialize state for `isGoingOut` as a boolean
+//      * - Make it so clicking the div.state--value flips that
+//      *   boolean value (true -> false, false -> true)
+//      * - Display "Yes" if `isGoingOut` is `true`, "No" otherwise
+//      */
+    
+//     return (
+//         <div className="state">
+//             <h1 className="state--title">Do I feel like going out tonight?</h1>
+//             <div className="state--value">
+//                 <h1>Yes</h1>
+//             </div>
+//         </div>
+//     )
+// }
+/*=============================================
+          ANSWER PART 5 - TERNARY PRACTICE
+==============================================*/
+// export default function App() {
+//     /**
+//      * Challenge: 
+//      * - Initialize state for `isGoingOut` as a boolean
+//      * - Make it so clicking the div.state--value flips that
+//      *   boolean value (true -> false, false -> true)
+//      * - Display "Yes" if `isGoingOut` is `true`, "No" otherwise
+//      */
+
+//     const [isGoingOut, setIsGoingOut] = React.useState(true)
+
+//     function handleClick() {
+//         setIsGoingOut(prevState => prevState ? false : true)
+//     }
+    
+//     return (
+//         <div className="state">
+//             <h1 className="state--title">Do I feel like going out tonight?</h1>
+//             <div className="state--value" onClick={handleClick}>
+//                 <h1>{isGoingOut ? 'Yes' : 'No'}</h1>
+//             </div>
+//         </div>
+//     )
+// }
+
