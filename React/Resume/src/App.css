@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.job-card{
+  flex: 3;
+}
+
+.contact-head {
+  display: flex;
+}
+
+.contact {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+
+  /* color: #fff; */
+  /* background-color: rgb(8, 156, 96); */
+  /* /* color: #fff; */
+    box-shadow: 0 0 0 1px rgb(77, 75, 75);
+
+  font-weight: 500;
+  padding: 8px;
+  border-right: 1px solid rgb(77, 75, 75);
+
+}
+.skills-container {
+  width: 100%;
+
+}
+
+.profile-img {
+  height: 100%;
+  padding: 5px;
+}
+
+.contact-head-side {
+  padding-left: 5px;
+}
+
+ul {
+  padding-left: 16px;
+}
+.skill {
+  border: 1px solid black;
+  border-radius: 8px;
+  display: inline-block;
+  padding: 2px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.contact-container {
+  padding: 5px;
+}
+
+.contact ul {
+  list-style-type: none;
+}
+
+
+
+.social-icons img {
+  display: flex;
+  flex-direction: column;
+  width: 30px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  background-color: #fff;
+}
+
+a {
+  /* color: #fff; */
+  text-decoration: none;
+  color: black;
+}
+
+.linkedin-container,.github-container,.twitter-container{
+  display: flex;
+  align-items: center;
+}
+
+.skills-title, .language-title, .education-title {
+  background-color: #2a6099;
+  color: white;
+  width: 50%;
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
+
+}
+
+.App{
+  width: 100%;
+}
+
+.resume{
+  display: flex;
+}
+
+.resume-jobs {
+  width: 70%;
+  padding: 8px 18px 8px 18px;
+  background-color: #fff;
+  
+}
+
+.job-card h5, .job-card h3 {
+  margin: 0;
+  padding: 2px;
+}
+
+.job-card h5 {
+  margin-bottom: 3px;
+} 
+
+.resume-jobs p {
+  margin: 0;
+  padding: 2px;
+}
+
+
+.education h4 {
+  margin-bottom: 3px;
+}
+
+.education p {
+  margin: 0;
+  padding: 1px;
+}
+
+.title, .subtitle {
+  text-align: center;
+}
+
+img {
+  width:100px;
+  border-radius: 5px;
+}
