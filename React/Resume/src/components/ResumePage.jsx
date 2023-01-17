@@ -31,7 +31,7 @@ const ResumePage = () => {
 		{
 			jobTitle: "Compliance Officer",
 			company: "Ferratum Bank",
-			startDate: "Oct 2010",
+			startDate: "Oct 2019",
 			endDate: "Apr 2020",
 			location: "Malta",
 			description: (
