@@ -8,7 +8,7 @@ import Education from "./Education";
 const ResumePage = () => {
 	const jobs = [
 		{
-			jobTitle: "Software Engineer",
+			jobTitle: "Full-Stack Software Engineer",
 			company: "100Devs Agency",
 			startDate: "Jan 2022",
 			endDate: "Dec 2022",
@@ -24,6 +24,23 @@ const ResumePage = () => {
 						and mobile applications
 					</li>
 					<li>Troubleshooting and debugging software issues</li>
+					{/* <li>Continuously testing and optimizing software performance</li> */}
+				</ul>
+			),
+		},
+		{
+			jobTitle: "Full-Stack Software Engineer",
+			company: "Freelance",
+			startDate: "May 2020",
+			endDate: "Jan 2022",
+			location: "Remote",
+			description: (
+				<ul>
+					<li>
+						Designing and developing software applications using a variety of
+						programming languages, frameworks and databases
+					</li>
+					<li>Building and maintaining a portfolio of clients</li>
 					{/* <li>Continuously testing and optimizing software performance</li> */}
 				</ul>
 			),
