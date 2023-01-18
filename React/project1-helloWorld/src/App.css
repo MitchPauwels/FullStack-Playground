@@ -11,8 +11,12 @@ body {
 }
 
 /* General Styling */
-.align-center{
+/* .align-center{
   align-self: center;
+} */
+
+.day-container{
+  display: flex;
 }
 
 .container {

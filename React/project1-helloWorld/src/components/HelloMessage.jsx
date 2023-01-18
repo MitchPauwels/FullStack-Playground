@@ -4,7 +4,7 @@ const HelloMessage = ({name}) => {
    
 	return (
 		<div>
-			<h3>Hello {name}</h3>
+			<h4>Hello {name}</h4>
 		</div>
 	);
 };

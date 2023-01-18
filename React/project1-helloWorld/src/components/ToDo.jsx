@@ -22,13 +22,12 @@ const ToDo = () => {
 
 
 	return (
-		<div>
 			<form onSubmit={submitHandler} className="container">
 				<div className="todo-container ">
-					<h1>
-						Project 3:
-						<br /> ToDo App
-					</h1>
+					<h2>
+						Day 1: ToDo
+						
+					</h2>
 					<label htmlFor="userInput" className="todo-label" /> Add Item
 					<input
 						type="text"
@@ -46,7 +45,6 @@ const ToDo = () => {
                 </ul>
 			</form>
 
-		</div>
 	);
 };
 

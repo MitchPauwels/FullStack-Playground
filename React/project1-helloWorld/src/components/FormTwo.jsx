@@ -18,7 +18,7 @@ const onSubmitHandler = (e) => {
 
 	return (
 		<form className="container" onSubmit={onSubmitHandler}>
-			<h1>Let's make another Form</h1>
+			<h2>Day 2: Form</h2>
 			<label htmlFor="firstName" /> Enter Name:
 			<input onChange={onChangeHandler} type="text" name="firstName" id="firstName" />
 			<label htmlFor="email" />

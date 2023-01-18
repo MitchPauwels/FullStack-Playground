@@ -22,6 +22,7 @@ const FormThree = () => {
 
     return(
         <form onSubmit={onSubmitHandler} className='container'>
+        <h2>Day 3: Form</h2>
             <label htmlFor='firstName' className='label'/> Name:
             <input onChange={onChangeHandler} type='text' name='firstName' id='firstName'/>
             <label htmlFor='email' className='label'/> Email:

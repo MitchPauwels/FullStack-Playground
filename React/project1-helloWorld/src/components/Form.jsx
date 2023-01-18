@@ -19,7 +19,7 @@ const onSubmitHandler = (e) => {
 
     return(
         <form className='form-container container' onSubmit={onSubmitHandler}>
-        <h1 className='form-title'>Project 2:<br/> Form</h1>
+        <h2 className='form-title'>Day 1: Form</h2>
             <label htmlFor='name' className='label'>Name: </label>
             <input onChange={onChangeHandler} type='text' name='name' id='name' placeholder='name'></input>
             <label htmlFor='email' className='label'>Email: </label>

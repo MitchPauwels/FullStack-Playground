@@ -1,34 +1,37 @@
 import React, { useState } from "react";
 
 const ToDoTwo = () => {
-const [items, setItems] = useState([])
-const [input, setInput] = useState('')
+	const [items, setItems] = useState([]);
+	const [input, setInput] = useState("");
 
-const onChangeHandler = (e) =>{
-    setInput(e.target.value)
-}
+	const onChangeHandler = (e) => {
+		setInput(e.target.value);
+	};
 
-const onSubmitHandler = (e) => {
-    e.preventDefault()
-    setItems(prevItems => (
-        [...prevItems, e.target.addItem.value]
-    ))
-    setInput('')
-} 
-
+	const onSubmitHandler = (e) => {
+		e.preventDefault();
+		setItems((prevItems) => [...prevItems, e.target.addItem.value]);
+		setInput("");
+	};
 
 	return (
 		<form className="container" onSubmit={onSubmitHandler}>
+			<h2>Day 2: ToDo</h2>
 			<label htmlFor="addItem" className="label" />
-			<input onChange={onChangeHandler} type="text" name="addItem" id="addItem" value={input} />
+			<input
+				onChange={onChangeHandler}
+				type="text"
+				name="addItem"
+				id="addItem"
+				value={input}
+			/>
 			<button className="button">Add Item</button>
-            <ul>
-                {items.map(item => {
-                  return <li>{item}</li>
-                })}
-            </ul>
+			<ul>
+				{items.map((item) => {
+					return <li>{item}</li>;
+				})}
+			</ul>
 		</form>
-        
 	);
 };
 
