@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const AnotherForm = () => {
+const FormTwo = () => {
 const [formData, setFormData] = useState({})
 
 const onChangeHandler = (e) => {
@@ -32,4 +32,4 @@ const onSubmitHandler = (e) => {
 	);
 };
 
-export default AnotherForm
+export default FormTwo
