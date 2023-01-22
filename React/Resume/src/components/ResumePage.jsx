@@ -28,23 +28,23 @@ const ResumePage = () => {
 				</ul>
 			),
 		},
-		{
-			jobTitle: "Full-Stack Software Engineer",
-			company: "Freelance",
-			startDate: "May 2020",
-			endDate: "Jan 2022",
-			location: "Remote",
-			description: (
-				<ul>
-					<li>
-						Designing and developing software applications using a variety of
-						programming languages, frameworks and databases
-					</li>
-					<li>Building and maintaining a portfolio of clients</li>
-					{/* <li>Continuously testing and optimizing software performance</li> */}
-				</ul>
-			),
-		},
+		// {
+		// 	jobTitle: "Full-Stack Software Engineer",
+		// 	company: "Freelance",
+		// 	startDate: "May 2020",
+		// 	endDate: "Jan 2022",
+		// 	location: "Remote",
+		// 	description: (
+		// 		<ul>
+		// 			<li>
+		// 				Designing and developing software applications using a variety of
+		// 				programming languages, frameworks and databases
+		// 			</li>
+		// 			<li>Building and maintaining a portfolio of clients</li>
+		// 			{/* <li>Continuously testing and optimizing software performance</li> */}
+		// 		</ul>
+		// 	),
+		// },
 		{
 			jobTitle: "Compliance Officer",
 			company: "Ferratum Bank",
