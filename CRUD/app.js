@@ -10,7 +10,6 @@ const contactSchema = new mongoose.Schema({
     email: String
 });
 const Contact = mongoose.model('Contact', contactSchema);
-mongoose.connect("mongodb+srv://EdgeRunner:ri^HONHzv7&LOA&&MlbBQA3ZYXD7LXvqWVAkdVYfquMHEAL18PUUJLLd1UPlmDl&6eN8gB@cluster0.3njedca.mongodb.net/?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
 
 
 // Create
