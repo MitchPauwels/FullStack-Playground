@@ -12,7 +12,7 @@ const ResumePage = () => {
 			company: "100Devs Agency",
 			startDate: "Jan 2022",
 			endDate: "Dec 2022",
-			location: "USA",
+			location: "USA - Remote apprenticeship",
 			description: (
 				<ul>
 					<li>
