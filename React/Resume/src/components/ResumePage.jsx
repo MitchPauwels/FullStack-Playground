@@ -17,7 +17,7 @@ const ResumePage = () => {
 				<ul>
 					<li>
 						Designing and developing software applications using a variety of
-						programming languages, frameworks and databases
+						programming languages, frameworks and databases.
 					</li>
 					<li>
 						Building and maintaining the front-end and back-end aspects of web
