@@ -21,7 +21,7 @@ const ResumePage = () => {
 					</li>
 					<li>
 						Building and maintaining the front-end and back-end aspects of web
-						and mobile applications
+						and mobile applications.
 					</li>
 					<li>Troubleshooting and debugging software issues</li>
 					{/* <li>Continuously testing and optimizing software performance</li> */}
